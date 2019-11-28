@@ -74,7 +74,7 @@ class TilapiaAdater(private var tilapiaList: List<Tilapia>, private val handleFi
 
         val dialog = AlertDialog.Builder(context)
             .setTitle("Help us in making the app better")
-            .setMessage("Select correct pokemon from the list below")
+            .setMessage("Select correct fish from the list below")
             .setView(view)
             .setPositiveButton("Submit") { dialog, _ ->
                 handleFileUpload.uploadImageToStorage(spinner.selectedItem as String)
