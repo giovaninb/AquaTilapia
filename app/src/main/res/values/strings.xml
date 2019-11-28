@@ -3,7 +3,7 @@
     <string name="detected_items">Detected Tilapia</string>
     <string name="settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="intro_1_title">Gotta find \'em all!</string>
+    <string name="intro_1_title">Find new info about your fish culture!</string>
     <string name="intro_1_desc">This is an experiment that uses state of the art Machine Learning algorithms to identify Tilapia in the provided Image.</string>
     <string name="login_desc">Login for the best experience and the ability to improve the app with personalized feedback.</string>
     <string name="logout_text">Do you wish to log out?</string>

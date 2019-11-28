@@ -42,21 +42,7 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
 //List of all the tilapia
-val tilapiaArray: Array<String> = arrayOf("Abra", "Aerodactyl", "Alakazam", "Arbok", "Arcanine", "Articuno", "Beedrill", "Bellsprout",
-    "Blastoise", "Bulbasaur", "Butterfree", "Caterpie", "Chansey", "Charizard", "Charmander", "Charmeleon", "Clefable", "Clefairy", "Cloyster", "Cubone", "Dewgong",
-    "Diglett", "Ditto", "Dodrio", "Doduo", "Dragonair", "Dragonite", "Dratini", "Drowzee", "Dugtrio", "Eevee", "Ekans", "Electabuzz",
-    "Electrode", "Exeggcute", "Exeggutor", "Farfetchd", "Fearow", "Flareon", "Gastly", "Gengar", "Geodude", "Gloom",
-    "Golbat", "Goldeen", "Golduck", "Golem", "Graveler", "Grimer", "Growlithe", "Gyarados", "Haunter", "Hitmonchan",
-    "Hitmonlee", "Horsea", "Hypno", "Ivysaur", "Jigglypuff", "Jolteon", "Jynx", "Kabuto",
-    "Kabutops", "Kadabra", "Kakuna", "Kangaskhan", "Kingler", "Koffing", "Krabby", "Lapras", "Lickitung", "Machamp",
-    "Machoke", "Machop", "Magikarp", "Magmar", "Magnemite", "Magneton", "Mankey", "Marowak", "Meowth", "Metapod",
-    "Mew", "Mewtwo", "Moltres", "Mrmime", "Muk", "Nidoking", "Nidoqueen", "Nidorina", "Nidorino", "Ninetales",
-    "Oddish", "Omanyte", "Omastar", "Onix", "Paras", "Parasect", "Persian", "Pidgeot", "Pidgeotto", "Pidgey",
-    "Pikachu", "Pinsir", "Poliwag", "Poliwhirl", "Poliwrath", "Ponyta", "Porygon", "Primeape", "Psyduck", "Raichu",
-    "Rapidash", "Raticate", "Rattata", "Rhydon", "Rhyhorn", "Sandshrew", "Sandslash", "Scyther", "Seadra",
-    "Seaking", "Seel", "Shellder", "Slowbro", "Slowpoke", "Snorlax", "Spearow", "Squirtle", "Starmie", "Staryu",
-    "Tangela", "Tauros", "Tentacool", "Tentacruel", "Vaporeon", "Venomoth", "Venonat", "Venusaur", "Victreebel",
-    "Vileplume", "Voltorb", "Vulpix", "Wartortle", "Weedle", "Weepinbell", "Weezing", "Wigglytuff", "Zapdos", "Zubat")
+val tilapiaArray: Array<String> = arrayOf("Acanthaluteres brownii", "Acanthistius cinctus", "Aluterus monoceros", "Aluterus scriptus");
 
 class MainActivity : BaseCameraActivity(), HandleFileUpload {
     companion object {
@@ -112,7 +98,7 @@ class MainActivity : BaseCameraActivity(), HandleFileUpload {
 
         //Load a local model using the FirebaseLocalModelSource Builder class
         val fireBaseLocalModelSource = FirebaseLocalModelSource.Builder("tilapia")
-            .setAssetFilePath("pokedex_91.tflite")
+            .setAssetFilePath("tilapia_27.tflite")
             .build()
 
         //Registering the model loaded above with the ModelManager Singleton
@@ -128,7 +114,7 @@ class MainActivity : BaseCameraActivity(), HandleFileUpload {
         //Specify the input and outputs of the model
         inputOutputOptions = FirebaseModelInputOutputOptions.Builder()
             .setInputFormat(0, FirebaseModelDataType.FLOAT32, intArrayOf(1, 224, 224, 3))
-            .setOutputFormat(0, FirebaseModelDataType.FLOAT32, intArrayOf(1, 149))
+            .setOutputFormat(0, FirebaseModelDataType.FLOAT32, intArrayOf(1, 4))
             .build()
 
         //Show target if not already shown

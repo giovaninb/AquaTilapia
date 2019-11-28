@@ -44,7 +44,7 @@ class IntroActivity : AppIntro2() {
                 true)
         addSlide(IntroLoginFragment.newInstance(getString(R.string.intro_1_title),
                 getString(R.string.intro_1_desc),
-                R.drawable.ic_camera,
+                R.drawable.splash,
                 ContextCompat.getColor(this, R.color.colorPrimary),
                 false))
         addSlide(introLoginFragment)
@@ -93,7 +93,7 @@ class IntroActivity : AppIntro2() {
     private fun startLogin(activity: AppCompatActivity) {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
-                .requestIdToken("948655078679-9a3pn01sjfoi7lcfbbgq28q85t6t786i.apps.googleusercontent.com")
+                .requestIdToken("852905937247-jqu4qi0rhboq56nm8aep6gdqcivos33j.apps.googleusercontent.com")
                 .build()
 
         val mGoogleSignInClient = GoogleSignIn.getClient(activity, gso)
